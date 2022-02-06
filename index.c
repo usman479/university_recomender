@@ -76,9 +76,12 @@ int main()
     printf("Enter your desired program: ");
     scanf(" %[^\n]s", user_program);
     int flag = 1;
-    for (int i = 0; i < count; i++)
+    int i=0;
+    int j=0;
+    for (i = 0; i < count; i++)
     {
-        for (int j = 0; j < 8; j++)
+        
+        for (j = 0; j < 8; j++)
         {
             if ((strcmp(strlwr(user_program), universities[i].programs[j])) == 0)
             {

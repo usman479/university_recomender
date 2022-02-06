@@ -34,7 +34,8 @@ void render()
 
     FILE *ptr;
     ptr = fopen("myfile.txt", "rb");
-    for (int i = 0; i < count; i++)
+    int i;
+    for (i = 0; i < count; i++)
     {
         fread(&universities[i], sizeof(struct Uni), 1, ptr);
     }
@@ -45,12 +46,14 @@ void universitiesavailable()
 {
     int flag = 1;
     printf("********** Universities Available For You **********\n\n");
-    for (int i = 0; i < count; i++)
+    int i;
+    int j;
+    for (i = 0; i < count; i++)
     {
         if (user_percentage >= universities[i].percentage && (strcmp(strlwr(user_city), universities[i].city)) == 0)
         {
 
-            for (int j = 0; j < 3; j++)
+            for (j = 0; j < 3; j++)
             {
                 if ((strcmp(strlwr(user_program), universities[i].programs[j])) == 0)
                 {
